@@ -1,0 +1,36 @@
+@mixin container {
+    width: 1200px;
+    margin: auto;
+}
+
+@mixin fco {
+    display: flex;
+    align-items: center;
+}
+
+@mixin foc {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin fcc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin abs($top: unset, $right: unset, $bottom: unset, $left: unset) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin border($color: unset, $radius: 0, $stroke: 1px) {
+    border: $stroke solid;
+    border-radius: $radius;
+    @if $color != unset {
+        border-color: $color;
+    }
+}

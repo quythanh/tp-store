@@ -1,0 +1,244 @@
+@font-face{
+    font-family: myfont;
+    src: url(../font/FVF_Fernando_08.ttf)
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: linear-gradient(to bottom, rgb(6, 25, 77) 30%, rgb(3, 4, 36) 80% ) 
+}
+
+.first {
+    font-family: myfont;
+    background-image: url(../img/welcome/Welcome1.jpg);
+    background-size: cover;
+    height: 650px;
+}
+
+header{
+    background-color: rgba(20, 20, 20, 0.493);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    text-shadow: 5px 5px 5px gray;
+}
+.logo{
+    margin-left: 10px;
+    padding: auto;
+}
+header div{
+    padding: 20px;
+}
+header div a{
+    font-size: large;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    line-height: 55px;
+}
+
+.loginBut button
+{
+    font-weight: bolder;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 3px solid white;
+    background-color: white;
+    color:rgba(20, 20, 20, 0.493);
+    text-shadow: none;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 22px;
+    margin-right: 45px;
+    margin-top: 20px;
+}
+
+.content1{
+    width: 30%;
+    height: 485px;
+    background-color: rgba(61, 61, 61, 0.164);
+    color: white;
+    padding: 30px;
+    margin: 50px;
+    margin-top: 5px;
+    float: right;
+    position: relative;
+    transition: opacity 1s;
+}
+
+.content1 h2{
+    margin-top: 15%;
+    color:rgb(74, 153, 255);
+    text-align: center;
+    font-size: xx-large;
+    
+}
+
+@keyframes fadein {
+    0% {opacity: 0%; }
+    10% {opacity: 20%; }
+    20% {opacity: 40%; }
+    30% {opacity: 60%; }
+    40% {opacity: 80%; }
+    50% {opacity: 100%; }
+    60%{opacity: 80%;}
+    70%{opacity: 60%;}
+    80% {opacity: 40%;}
+    90% {opacity: 20%; }
+    100%{ opacity: 0%;}
+}
+
+.content1 a img{
+    height: 90px;
+    width: 80px;
+    transform: rotate(270deg);
+    position: absolute;
+    left: 20%;
+    transform: rotateX(-50%);
+    top: 73%;
+    animation: fadein 1s infinite;
+    transition: width .4s, height .4s;
+}
+
+.second{
+    opacity: 0%;
+    font-family: myfont;
+    background: linear-gradient(to bottom, rgb(66, 82, 221) 30%,rgba(10, 10, 10, 0.329) );
+    height: 700px;
+    margin-top: 250px;
+    margin:100px;
+    position: relative;
+    border-radius: 25px;
+    transition: opacity 3s;
+}
+.second img{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.second .content1
+{
+    height: 90%;
+}
+.second .content1 h1{
+    color: white    ;
+    padding-top: 20px;
+    font-size: xx-large;
+}
+
+.third{
+    opacity: 0%;
+    background-color: aliceblue;
+    height: 700px;
+    margin:100px;
+    position: relative;
+    border-radius: 25px;
+    transition: opacity 6s;
+}
+
+.third img{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+
+}
+.third img:nth-of-type(2){
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 186px;
+    height: 149px;
+    transform: rotate(90deg);
+}
+
+.third img:nth-of-type(3)
+{
+    position: absolute;
+    top: 65%;
+    left: 75%;
+    width: 298px;
+    height: 210px;
+    transform: rotate(90deg);
+}
+.third .content1{
+    margin-top: 10%;
+    font-family: "SVN-Avengeance";
+    padding-top: 5%;
+    font-size: 1.5em;
+    color: rgb(37, 22, 172);
+    background-color: rgba(225, 212, 232, 0);
+}
+
+.fourth{
+    opacity: 0%;
+    font-family: "baloo Paaji 2";
+    display: block;
+    text-align: center;
+    background: url(../img/welcome/grid.jpg);
+    background-size: cover;
+    height: 350px;
+    margin-top: 200px;
+    position: relative;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    border-top: 15px solid white;
+    transition: opacity 10s;
+}
+
+.fourth h1{
+    font-size: 2.5em;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 68, 0, 0);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    width: fit-content;
+    height: fit-content;
+    padding:10px 30px;
+    border: 2px solid white;
+    border-radius: 35px;
+}
+
+.fourth button{
+    position: absolute;
+    top: 60%;
+    transform: translateX(-50%);
+    font-size: xx-large;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    border: 3px solid white;
+    box-shadow: 0px 15px 2px white;
+    transition: top .4s, box-shadow .4s;
+}
+
+.footer
+{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(35,39,42);
+}
+
+/* hover animation, transition */
+
+.fourth button:hover{
+    top: 63%;
+    box-shadow: 0px 5px 2px white;
+}
+
+.content1 a img:hover{
+    width: 90px;
+    height: 100px;
+}

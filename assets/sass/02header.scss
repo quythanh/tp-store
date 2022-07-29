@@ -1,0 +1,156 @@
+@import 'mixin';
+
+@font-face {
+    font-family: 'myfont';
+    src: url(../font/FVF_Fernando_08.ttf);
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    color: #f0f6fc;
+    background-color: #212528;
+
+    &__inner {
+        @include container;
+        @include fco;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .search {
+        @include fco;
+        color: #c9d1d9;
+        background-color: #0d1117;
+        padding: 15px 20px;
+        border-radius: 9999px;
+
+        i {
+            margin-right: 10px;
+        }
+
+        > input {
+            color: inherit;
+            font-size: 16px;
+        }
+    }
+}
+
+.shop_name {    
+    height: 48px;
+    font-size: 32px;
+    line-height: 32px;
+    font-family: myfont;
+    margin: auto 0;
+    text-shadow: #aaa 3px 3px 5px;
+}
+
+nav {
+    @include fco;
+
+    & * {
+        cursor: pointer;
+    }
+    
+    > a {
+        width: 80px;
+        height: 72px;
+        position: relative;
+        @include fcc;
+
+        > i {
+            font-size: 30px;
+            -webkit-text-stroke: 2px #fff;
+            color: transparent;
+        }
+
+        &::before {
+            @include abs(0, $left: 0);
+            height: 0;
+            width: 100%;
+            border-bottom: 4px solid #212528;
+            transition: .5s ease-in-out;
+            overflow: hidden;
+            
+            content: "";
+            text-align: center;
+            line-height: 72px;
+            font-size: 30px;
+            font-family: fontAwesome;
+        }
+
+        &:hover::before {
+            height: 100%;
+            border-color: #fff;
+        }
+
+        &:nth-child(1)::before {
+            content: '\f015';
+        }
+
+        &:nth-child(2)::before {
+            content: '\f07a';
+        }
+    }
+}
+
+.user {
+    @include fcc;
+    height: 80px;
+    position: relative;
+    margin: 0 20px;
+
+    &:hover &__nav {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    > button {
+        padding: 6px 15px;
+        color: #fff;
+        @include border($radius: 9999px);
+        font-size: 16px;
+        &:hover {
+            background-color: rgba(255, 255, 255, .3);
+        }
+    }
+
+    &__icon {
+        @include fcc;
+        @include border(#fff, 50%);
+        width: 40px;
+        height: 40px;
+        margin: 0 20px;
+    }
+
+    &__nav {
+        @include abs(75px, 15px);
+        @include border($radius: 6px);
+        min-width: 120px;
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: 85% 0;
+        transition: all 0.5s;
+
+        a {
+            width: 100%;
+            padding: 10px 20px;
+            display: block;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, .3);
+            }
+        }
+
+        &::before {
+            content: '';
+            @include abs(-10px, 15px);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: transparent transparent #fff transparent;
+            border-width: 0 10px 10px 10px;
+        }
+    }
+}

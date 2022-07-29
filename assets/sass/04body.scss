@@ -1,0 +1,114 @@
+@import "mixin";
+
+.container {
+    @include container;
+}
+
+.spotlight {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    margin: 15px 0;
+
+    .list__img {
+        @include abs(0, 86%, 0, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .main__img {
+        @include abs(0, 0, 0, 7.5%);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        transition: all .3s;
+    }
+}
+
+.list__img > div {
+    height: 30%;
+    cursor: pointer;
+
+    .info {
+        @include abs(unset, unset, 0, 50%);
+        padding: 30px calc(50% + 60px);
+        background: radial-gradient(rgba(11, 11, 11, 0.1), rgba(11, 11, 11, 0.05), rgba(11, 11, 11, 0));
+    }
+
+    &:not(.active) {
+        img {
+            opacity: 0.5;
+        }
+
+        .info {
+            display: none;
+        }
+    }
+
+    &.active img {
+        @include border(#aaa, 8px, 3px);
+    }
+
+    &:hover img {
+        opacity: 1;
+        @include border(#aaa, 8px, 3px);
+    }
+}
+
+.info {
+    &__price {
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: 10px;
+        text-shadow: #000 0 0 5px;
+    }
+
+    &__control {
+        display: flex;
+
+        > button {
+            margin: 20px 0;
+            padding: 15px 20px;
+            min-width: 170px;
+            background-color: #fff;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+
+            > i {
+                margin-right: 5px;
+            }
+
+            + button {
+                color: #fff;
+                background-color: transparent;
+                margin-left: 20px;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
+    }
+}
+
+.section {
+    width: 100%;
+    margin: 40px 0;
+
+    &__title {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    &__inner {
+        @include border(#333, 8px);
+        
+    }
+}
