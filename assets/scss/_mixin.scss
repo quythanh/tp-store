@@ -6,17 +6,31 @@
 @mixin fco {
     display: flex;
     align-items: center;
+    @content;
 }
 
 @mixin foc {
     display: flex;
     justify-content: center;
+    @content;
 }
 
 @mixin fcc {
     display: flex;
     align-items: center;
     justify-content: center;
+    @content;
+}
+
+@mixin btn {
+    padding: 15px 20px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 170px;
+    @content;
 }
 
 @mixin abs($top: unset, $right: unset, $bottom: unset, $left: unset) {

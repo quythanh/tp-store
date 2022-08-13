@@ -1,10 +1,5 @@
 @import 'mixin';
 
-@font-face {
-    font-family: 'myfont';
-    src: url(../font/FVF_Fernando_08.ttf);
-}
-
 .header {
     height: 80px;
     display: flex;
@@ -40,58 +35,9 @@
     height: 48px;
     font-size: 32px;
     line-height: 32px;
-    font-family: myfont;
+    font-family: Fernando;
     margin: auto 0;
     text-shadow: #aaa 3px 3px 5px;
-}
-
-nav {
-    @include fco;
-
-    & * {
-        cursor: pointer;
-    }
-    
-    > a {
-        width: 80px;
-        height: 72px;
-        position: relative;
-        @include fcc;
-
-        > i {
-            font-size: 30px;
-            -webkit-text-stroke: 2px #fff;
-            color: transparent;
-        }
-
-        &::before {
-            @include abs(0, $left: 0);
-            height: 0;
-            width: 100%;
-            border-bottom: 4px solid #212528;
-            transition: .5s ease-in-out;
-            overflow: hidden;
-            
-            content: "";
-            text-align: center;
-            line-height: 72px;
-            font-size: 30px;
-            font-family: fontAwesome;
-        }
-
-        &:hover::before {
-            height: 100%;
-            border-color: #fff;
-        }
-
-        &:nth-child(1)::before {
-            content: '\f015';
-        }
-
-        &:nth-child(2)::before {
-            content: '\f07a';
-        }
-    }
 }
 
 .user {
@@ -102,7 +48,9 @@ nav {
 
     &:hover &__nav {
         opacity: 1;
+        z-index: 1;
         transform: scale(1);
+        background-color: #181a1e;
     }
 
     > button {
@@ -132,7 +80,7 @@ nav {
         transform-origin: 85% 0;
         transition: all 0.5s;
 
-        a {
+        > a {
             width: 100%;
             padding: 10px 20px;
             display: block;

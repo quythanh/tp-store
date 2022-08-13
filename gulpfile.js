@@ -5,22 +5,32 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass')(require('sass'));
 var concat = require('gulp-concat');
-var minifyCss = require('gulp-cssnano');
-var sourcemaps = require('gulp-sourcemaps')
+var cssnano = require('cssnano');
+var postcss = require('gulp-postcss');
+var sourcemaps = require('gulp-sourcemaps');
 
 // var path
 const appDir = '.';
 const assetsDir = `${appDir}/assets`;
 const jsDir = `${assetsDir}/js`;
 const cssDir = `${assetsDir}/css`;
-const sassDir = `${assetsDir}/sass`;
+const scssDir = `${assetsDir}/scss`;
 
 // Compile Our Sass
 gulp.task('sass', function () {
-    return gulp.src(`${sassDir}/**/*.scss`)
+    var plugins = [
+        cssnano({
+            preset: [
+                'advanced',
+                {"discardUnused": {"fontFace": false, "keyframes": false}}
+            ]
+        }),
+    ];
+
+    return gulp.src(`${scssDir}/**/*.scss`)
         .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(minifyCss())
+        .pipe(postcss(plugins))
         .pipe(concat('all.min.css'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(cssDir))
@@ -36,7 +46,7 @@ gulp.task('server', function () {
         }
     });
 
-    gulp.watch([`${sassDir}/**/*.scss`], gulp.series('sass'));
+    gulp.watch([`${scssDir}/**/*.scss`], gulp.series('sass'));
     gulp.watch("./*.html").on('change', browserSync.reload);
     gulp.watch(`${jsDir}/**/*.js`).on('change', browserSync.reload);
     gulp.watch(`${cssDir}/all.min.css`).on('change', browserSync.reload);

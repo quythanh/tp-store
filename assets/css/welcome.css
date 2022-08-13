@@ -1,5 +1,5 @@
 @font-face{
-    font-family: myfont;
+    font-family: Fernando;
     src: url(../font/FVF_Fernando_08.ttf)
 }
 
@@ -17,7 +17,7 @@ body{
 }
 
 .first {
-    font-family: myfont;
+    font-family: Fernando;
     background-image: url(../img/welcome/Welcome1.jpg);
     background-size: cover;
     height: 650px;
@@ -110,7 +110,7 @@ header div a{
 
 .second{
     opacity: 0%;
-    font-family: myfont;
+    font-family: Fernando;
     background: linear-gradient(to bottom, rgb(66, 82, 221) 30%,rgba(10, 10, 10, 0.329) );
     height: 700px;
     margin-top: 250px;

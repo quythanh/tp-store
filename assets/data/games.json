@@ -1,0 +1,85 @@
+{
+    "spotlight": [
+        {
+            "id": "g01",
+            "name": "Genshin Impact",
+            "thumbnail": "./assets/img/games/g01_thumbnail.jpg",
+            "img_src": "./assets/img/games/g01.jpg",
+            "price": "Free"
+        },
+        {
+            "id": "g02",
+            "name": "Marvel's Spider-Man Remastered",
+            "thumbnail": "./assets/img/games/g02_thumbnail.jpg",
+            "img_src": "./assets/img/games/g02.jpg",
+            "price": "1,139,000đ"
+        },
+        {
+            "id": "g03",
+            "name": "FIFA 23 Standard Edition",
+            "thumbnail": "./assets/img/games/g03_thumbnail.jpg",
+            "img_src": "./assets/img/games/g03.jpg",
+            "price": "1,090,000đ"
+        }
+    ],
+    "sections": [
+        {
+            "name": "Top Selling",
+            "data": [
+                {
+                    "id": "g04",
+                    "name": "Minecraft Java & Bedrock",
+                    "thumbnail": "./assets/img/games/g04_thumbnail.jpg",
+                    "price": "670,000đ"
+                },
+                {
+                    "id": "g05",
+                    "name": "Grand Thief Auto V",
+                    "thumbnail": "./assets/img/games/g05_thumbnail.jpg",
+                    "price": "455,500đ"
+                },
+                {
+                    "id": "g07",
+                    "name": "Microsoft Flight Simulator",
+                    "thumbnail": "./assets/img/games/g07_thumbnail.jpg",
+                    "price": "1,340,000đ"
+                },
+                {
+                    "id": "g08",
+                    "name": "The Quarry - Deluxe Edition",
+                    "thumbnail": "./assets/img/games/g08_thumbnail.jpg",
+                    "price": "1,150,000đ"
+                }
+            ]
+        },
+        {
+            "name": "Most Popular",
+            "data": [
+                {
+                    "id": "g06",
+                    "name": "ARK: Survival Evolved",
+                    "thumbnail": "./assets/img/games/g06_thumbnail.jpg",
+                    "price": "186,000đ"
+                },
+                {
+                    "id": "g09",
+                    "name": "CS:GO",
+                    "thumbnail": "./assets/img/games/g09_thumbnail.jpg",
+                    "price": "340,000đ"
+                },
+                {
+                    "id": "g10",
+                    "name": "Stray",
+                    "thumbnail": "./assets/img/games/g10_thumbnail.jpg",
+                    "price": "374,500đ"
+                },
+                {
+                    "id": "g11",
+                    "name": "Raft",
+                    "thumbnail": "./assets/img/games/g11_thumbnail.jpg",
+                    "price": "188,000đ"
+                }
+            ]
+        }
+    ]
+}

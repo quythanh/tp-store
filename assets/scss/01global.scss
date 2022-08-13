@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 @import 'mixin';
 
+@font-face {
+    font-family: Fernando;
+    src: url(../font/FVF_Fernando_08.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;

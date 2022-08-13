@@ -1,100 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
-
-    <link rel="stylesheet" href="https://quythanh.tk/assets/css/fontawesomepro/all.css">
-    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/welcome.css">
+    <title>Document</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header__inner">
-            <a href="/" class="shop_name">TP Store</a>
-            <div class="search">
-                <i class="fa-light fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search Store">
+    <div class="first">
+        <header>
+            <div class="logo">
+                <h2>TP Store</h2>
             </div>
-            <nav>
-                <a href="/">
-                    <i class="fa-duotone fa-house"></i>
-                </a>
-                <a href="/cart">
-                    <i class="fa-duotone fa-cart-shopping"></i>
-                </a>
-                <div class="user"></div>
-            </nav>
-        </div>
-    </header>
-
-    <div class="container">
-        <div class="spotlight">
-            <div class="main__img">
-                <img src="./assets/img/spotlight/g01.jpg" alt="">
+            <div class="menu">
+                <a href="/home.html">Home</a>
+                <a href="/home.html">Support</a>
+                <a href="/home.html">About us</a>
             </div>
-            
-            <div class="list__img">
-                <div class="active">
-                    <img src="./assets/img/spotlight/g01_thumbnail.jpg" alt="">
-                    <div class="info">
-                        <div class="info__price">Free</div>
-                        <div class="info__control">
-                            <button>PLAY FOR FREE</button>
-                            <button>ADD TO WISHLIST</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="./assets/img/spotlight/g02_thumbnail.jpg" alt="">
-                    <div class="info">
-                        <div class="info__price">1.139.000đ</div>
-                        <div class="info__control">
-                            <button>
-                                <i class="fa-duotone fa-cart-shopping"></i>
-                                ADD TO CART
-                            </button>
-                            <button>ADD TO WISHLIST</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="./assets/img/spotlight/g03_thumbnail.jpg" alt="">
-                    <div class="info">
-                        <div class="info__price">1.090.000đ</div>
-                        <div class="info__control">
-                            <button>
-                                <i class="fa-duotone fa-cart-shopping"></i>
-                                ADD TO CART
-                            </button>
-                            <button>ADD TO WISHLIST</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="loginBut" >
+                <button type="button">Join us</button>
             </div>
-        </div>
+        </header>
         
-        <div class="section">
-            <h2 class="section__title">Most popular</h2>
-            <div class="section__inner">
-                <div class="list_game">
-                    <div class="game">
-                        
-                    </div>
-                    <div class="game">
-
-                    </div>
-                    <div class="game">
-
-                    </div>
-                </div>
-            </div>
+        <div class="content1" id="c1">
+            <h2>TP Store</h2>
+            <p>...Nếu như bạn là một game thủ chuyên nghiệp, hay chỉ đơn giản là bạn thích chơi game,
+                chào mừng đến với thế giới của chúng tôi - TP Store ...
+            </p>
+            <a href="#2nd" onclick="move('2nd')"><img src="./assets/img/welcome/arrow.png"></a>
         </div>
     </div>
 
-    <script src="./assets/js/modal.js"></script>
-    <script src="./assets/js/login.js"></script>
-    <script src="./assets/js/spotlight.js"></script>
+    <div class="second" id="2nd">
+        <img id="ani" src="./assets/img/welcome/steamcards_cards_02.png">
+        <div class="content1">
+            <h1><i>..Sở hữu ngay cho mình những bản game hiện hành, nổi tiếng hiện nay..</i></h1>
+            <a href="#3rd"><img src="./assets/img/welcome/arrow.png"></a>
+        </div>
+    </div>
+
+    <div class="third" id="3rd">
+        <img src="./assets/img/welcome/gamer.jpg">
+        <img src="./assets/img/welcome/gear1.png">
+        <img src="./assets/img/welcome/gear2.png">
+        <div class="content1">
+            <h1>..Những bản game bản quyền với mức giá hợp lý..</h1>
+            <a href="#4th" ><img src="./assets/img/welcome/arrow.png"></a>
+        </div>
+    </div>
+    
+    <div class="fourth" id="4th">
+        <h1>Bạn đã sẵn sàng để tham gia cùng chúng tôi?</h1>
+        <a href="/home.html"><button>Tham gia!</button></a>
+    </div>
+
+    <script>
+        const move = m => {
+            document.getElementById(m).style.opacity = '100%';
+        }
+
+        window.addEventListener("scroll", () => move("2nd"));
+        window.addEventListener("scroll", () => move("3rd"));
+        window.addEventListener("scroll", () => move("4th"));
+    </script>
 </body>
 </html>
