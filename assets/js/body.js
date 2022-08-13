@@ -2,7 +2,7 @@ var currentImg = 0;
 var myTimeout;
 
 const renderSpotlight = () => {
-    fetch('/assets/data/games.json')
+    fetch('./assets/data/games.json')
         .then(res => res.json())
         .then(data => {
             const spotlight = document.querySelector('.spotlight');
@@ -62,7 +62,7 @@ const renderSections = () => {
     const sections = document.querySelector('.sections');
     sections.innerHTML = '';
 
-    fetch('/assets/data/games.json')
+    fetch('./assets/data/games.json')
         .then(res => res.json())
         .then(data => {
             data['sections'].map(s => {
